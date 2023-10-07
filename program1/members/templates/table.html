@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <table border = '6' bgcolor = "powderblue">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL </th>
+                <th>CONTACT</th>
+                <th>PASSWORD<th>
+                <th>DELETE</th>
+                <th>UPDATE</th>
+            </tr>
+            {% for i in details %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.contact}}</td>
+                    <td>{{i.password}}</td>
+                    <td><a href="Delete/{{ i.id }}">Delete</a></td>
+                    <td><a href="Update/{{i.id}}">Update</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
